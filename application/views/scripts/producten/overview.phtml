@@ -1,0 +1,13 @@
+<h1>producten overzicht</h1>
+
+
+<?php foreach($this->producten as $producten){
+    echo "<div class='productlijst'>".
+            "<div class='productimage'>hier komt productafbeelding</div>
+            <div class='productcontentright'>".
+            "<h4>".$producten['productTitle']."</h4>".
+            "<span class='price'><span class='eurosign'>&euro; </span>".$producten['productPrice']."</span>".
+            "<p class='teaserlist'>".$producten['productTeaser']."</p>".
+            "<a href='producten/detail/productID/".$producten['productID']."'>detail</a>".
+            "</div></div>";
+}

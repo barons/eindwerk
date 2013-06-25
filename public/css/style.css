@@ -1,0 +1,253 @@
+/* 
+    Document   : style
+    Created on : Jun 18, 2013, 7:37:06 PM
+    Author     : BaronS
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    
+    font-size: 1em;
+}
+
+root { 
+    display: block;
+}
+
+body{
+    background-image:url('../images/background-test.gif');
+    font-family: sans-serif;
+    background-size: cover;
+    background-attachment:  fixed;
+}
+
+#container{
+    width: 100%;
+    max-width: 1024px;
+    margin: auto auto;
+    margin-top: 30px;
+    background-color: #eaeaea;
+    -webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 0px 30px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 0px 30px rgba(50, 50, 50, 0.75);
+    overflow: hidden;
+}
+
+section#content-container{
+    overflow: hidden;
+    clear: both;
+    margin-top: 30px;
+}
+
+header{
+    width: 100%;
+    min-height: 286px;
+    background-image: url('../images/header.png');
+    background-size:cover;
+    background-position: bottom;
+}
+
+nav{
+    background-image: url('../images/menu-background.png');
+    background-repeat: repeat-x;
+    width: 100%;
+    min-height: 56px;
+}
+nav ul.navigation{
+    min-height: 32px;
+    padding-top: 13px;
+    padding-left: 5%;
+}
+nav ul.navigation li{
+    display: inline;
+    margin-right: 3%;
+}
+
+#hello{
+    width: 10%;
+    min-height: 30px;
+    padding-top: 15px;
+    margin-top: -5px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #f52d09;
+    float: right;
+}
+#hello a{
+    color: #f52d09;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-decoration: none;
+}
+
+footer{
+    background-image: url('../images/footer-background.png');
+    background-repeat: repeat-x;
+    background-position: top;
+    width: 100%;
+    min-height: 76px;
+}
+
+section#left-sidebar{
+    width: 30%;
+    float: left;
+}
+section#left-sidebar ul.navigation li, nav ul.navigation li {
+    list-style-type: none;
+}
+section#left-sidebar ul.navigation li a, nav ul.navigation li a{
+    color: #f52d09;
+    text-decoration: none;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+section#left-sidebar ul.navigation li a{
+    color: black;
+    padding-left: 7%;
+}
+
+section#content-container-right{
+    width: 65%;
+    padding-left: 5%;
+    float: left;
+    clear:right;
+}
+
+h1{
+    color: white;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    text-shadow: 0px 0px 30px #7f7f7f;
+}
+h3, h4{
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    font-variant: small-caps;
+    text-shadow: 0px 0px 30px #7f7f7f;
+    color: white;
+}
+h4{
+    font-variant: normal;
+    color: black;
+    font-size: 1.1em;
+    text-shadow: none;
+}
+
+h3#basket{
+    background-color: #f52d09;
+    display: block;
+    width: 100%;
+    padding-left: 7%;
+    min-height: 15px;
+    color: white;
+}
+h3#categories{
+    padding-left: 7%;
+}
+
+a, a:visited{
+    color: #f52d09;
+}
+a:hover{
+    text-decoration: none;
+}
+
+#basket{
+    background-color: #f52d09;
+    overflow: hidden;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+#basketContent{
+    width: 90%;
+    border-color: #f52d09;
+    background-color: #ffffff;
+    min-height: 200px;
+    margin-left: 7%;
+    margin-bottom: 4%;
+}
+
+/*PRODUCTLIJST*/
+.productlijst, #adminoverview{
+    width: 91%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 2%;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+p.teaserlist{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.productcontentright{
+    width: 48%;
+    float: left;
+}
+.deletecross a{
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-image: url('../images/delete-cross.png');
+    position: relative;
+    left: 95%;
+    top: 2%;
+}
+
+/*PRODUCTDETAIL*/
+span.price{
+    color: #f52d09;
+    font-size: 2em;
+}
+div.productimage{
+    width: 50%;
+    margin-right: 2%;
+    float: left;
+    min-height: 185px;
+    background-color: darkgray;
+    background-image: url('../images/default-image.jpg');
+    background-size: cover;
+}
+p.teaser{
+    font-weight: bold;
+    line-height: 1.2em;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+p.content{
+
+}
+
+/*ADMIN PAGE*/
+#adminoverview{
+    background-color: #f52d09;
+}
+#adminoverview a, #adminoverview h4{
+    color: white;
+}
+
+/*RESPONSIVE*/
+@media screen and (max-width: 480px) {
+    section#left-sidebar{
+        display: none;
+    }
+    
+    section#content-container-right{
+    width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body{
+        background-image:url('../images/kindajean.png');
+        font-family: sans-serif;
+        background-size: initial;
+        background-attachment:  fixed;
+    }
+}

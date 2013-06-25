@@ -1,0 +1,21 @@
+<h1>admin overview</h1>
+<div id="adminoverview">
+    <h4>dashboard</h3>
+    <a href="admin/producten/add" title="add product">add product</a><br/>
+    <a href="admin/categories/add" title="add categorie">add categorie</a><br/>
+    <a href="admin/pages/add" title="add page">add page</a>
+</div>
+<?php
+foreach ($this->producten as $producten) {
+    
+    echo "<div class='productlijst'>".
+            "<div class='productimage'>hier komt productafbeelding</div>
+            <div class='productcontentright'>".
+            "<div class='deletecross'><a href='/admin/producten/remove' title='delete this product'>&nbsp;</a></div>".
+            "<h4>".$producten['productTitle']."</h4>".
+            "<span class='price'><span class='eurosign'>&euro; </span>".$producten['productPrice']."</span>".
+            "<p class='teaserlist'>".$producten['productTeaser']."</p>".
+            "<a href='producten/detail/productID/".$producten['productID']."'>detail</a>".
+            "<a href='admin/producten/edit/productID/" . $producten['productID'] . "'>pas aan</a>" .
+            "</div></div>";
+}

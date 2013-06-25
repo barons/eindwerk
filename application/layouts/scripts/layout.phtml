@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+    <?php echo $this->headLink()->appendStylesheet($this->baseUrl('/css/style.css')); ?>
+    <body>
+        <div id="container">
+            <header>
+                &nbsp;
+            </header>
+            
+            <nav>
+                <?php
+                $menucontainer = Zend_Registry::get('Zend_Navigation_Menu');
+                echo $this->navigation()->menu($menucontainer);
+                ?>
+                <?php
+                //if user is logged in display the name and logout button
+                //else display login button
+                $auth = Zend_Auth::getInstance();
+                $identity = $auth->getIdentity();
+                if (isset($identity)) {
+                    $userName = $identity['userName'];
+                    echo "<div id='hello'>
+                            <h5>hello ".$userName ."</h5>
+                            <a href='logout' title='logout' id='login_btn'>logout</a>
+                            </div>";
+                } else {
+                    echo "<div id='hello'><a href='login' title='login' id='login_btn'>login</a></div>";
+                }
+                ?>
+            </nav>
+            <section id="content-container">
+                <section id="left-sidebar">
+                    <h3 id="categories">categories</h3>
+                    <?php
+                    
+                    $catscontainer = Zend_Registry::get('Zend_Navigation_Cats');
+                    echo $this->navigation()->menu($catscontainer);
+                    
+                    ?>
+                    <div id="basket">
+                        <h3 id="basket">the basket</h3>
+                        <div id="basketContent">
+                            <?php
+                            //if basket is empty
+                            ?>
+
+                        </div>
+                    </div>
+                </section>
+                <section id="content-container-right">
+                    <article>
+                        <?php echo $this->layout()->content; ?>
+                    </article>
+                    </article>
+                </section>
+
+            </section>
+            <footer>&nbsp;</footer>
+        </div>
+    </body>
+</html>

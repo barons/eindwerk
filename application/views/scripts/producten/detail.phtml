@@ -1,0 +1,21 @@
+
+
+
+<?php
+
+$producten = $this->producten;
+?>
+
+<h1><?php echo $producten['productTitle']; ?></h1>
+
+<?php
+echo "<div class='productlijst'>".
+     "<div class='productimage'>hier komt productafbeelding</div>
+     <div class='productcontentright'>".
+     "<span class='price'><span class='eurosign'>&euro; </span>".$producten['productPrice']."</span>".
+     "<p class='teaser'>".$producten['productTeaser']."</p>".
+     "<p class='content'>".$producten['productContent']."</p>".
+     "<a href='/addbasket'>add to basket</a>".
+     "</div></div> <a href='/eindwerk' title='back to overview'>back to product list</a>"
+     
+;
